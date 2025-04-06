@@ -59,15 +59,15 @@ You can install these libraries using the following command:
 pip install flask pandas numpy scikit-learn
 
 
-## Contributing
+# Contributing
 
 We welcome contributions to improve the Automated-data-cleaning tool. Please fork the repository and submit pull requests with your improvements.
 
-## License
+# License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
-## Contact
+# Contact
 
 For any questions or suggestions, please open an issue in this repository.
 ```
