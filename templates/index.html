@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Data Cleaning Tool</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='index.css') }}"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h2>Upload Dataset for Cleaning</h2>
+
+      <!-- File Input -->
+      <form id="uploadForm" enctype="multipart/form-data">
+        <label>Select Dataset:</label>
+        <input
+          type="file"
+          id="fileInput"
+          name="file"
+          accept=".csv, .xlsx"
+          required
+        /><br />
+
+        <!-- File Preview Section -->
+        <div id="fileInfo" style="display: none">
+          <p><strong>File Name:</strong> <span id="fileName"></span></p>
+          <p><strong>Size:</strong> <span id="fileSize"></span> KB</p>
+          <p><strong>Preview:</strong></p>
+          <table id="dataPreview"></table>
+        </div>
+
+        <!-- Data Cleaning Options -->
+        <label>Handle Missing Values:</label>
+        <select name="missing" id="missing">
+          <option value="none">None</option>
+          <option value="drop">Drop Rows</option>
+          <option value="mean">Fill with Mean</option>
+          <option value="median">Fill with Median</option>
+          <option value="mode">Fill with Mode</option>
+        </select>
+
+        <label>Remove Duplicates?</label>
+        <select name="duplicates" id="duplicates">
+          <option value="no">No</option>
+          <option value="yes">Yes</option>
+        </select>
+
+        <label>Feature Scaling:</label>
+        <select name="scaling" id="scaling">
+          <option value="none">None</option>
+          <option value="minmax">MinMax Scaling</option>
+          <option value="standard">Standard Scaling</option>
+        </select>
+
+        <label>Encode Categorical Data:</label>
+        <select name="encoding" id="encoding">
+          <option value="none">None</option>
+          <option value="onehot">One-Hot Encoding</option>
+          <option value="label">Label Encoding</option>
+        </select>
+
+        <!-- Submit Button -->
+        <button type="button" onclick="uploadFile()">Clean & Download</button>
+      </form>
+    </div>
+
+    <script src="{{ url_for('static', filename='index.js') }}"></script>
+  </body>
+</html>
