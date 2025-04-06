@@ -1,0 +1,35 @@
+body {
+  background: linear-gradient(to right, #f4f4f4, #69a7de);
+  color: rgb(158, 190, 241);
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 20px;
+}
+
+.container {
+  width: 50%;
+  margin: auto;
+  background: rgba(255, 255, 255, 0.4);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+input,
+select,
+button {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: none;
+}
+
+button {
+  background-color: #004e92;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #003366;
+}
